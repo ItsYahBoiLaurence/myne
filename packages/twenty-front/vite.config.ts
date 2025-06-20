@@ -82,6 +82,7 @@ export default defineConfig(({ command, mode }) => {
     cacheDir: '../../node_modules/.vite/packages/twenty-front',
 
     server: {
+      host: '0.0.0.0',
       port: port,
       ...(VITE_HOST ? { host: VITE_HOST } : {}),
       ...(SSL_KEY_PATH && SSL_CERT_PATH
