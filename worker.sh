@@ -1,0 +1,1 @@
+npx nx worker twenty-server
