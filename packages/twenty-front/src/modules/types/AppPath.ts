@@ -1,4 +1,6 @@
 export enum AppPath {
+  Dashboard = '/dashboard',
+
   // Not logged-in
   Verify = '/verify',
   VerifyEmail = '/verify-email',

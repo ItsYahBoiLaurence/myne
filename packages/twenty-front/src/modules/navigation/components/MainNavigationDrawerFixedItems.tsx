@@ -5,6 +5,7 @@ import { isNavigationDrawerExpandedState } from '@/ui/navigation/states/isNaviga
 import { navigationDrawerExpandedMemorizedState } from '@/ui/navigation/states/navigationDrawerExpandedMemorizedState';
 import { navigationMemorizedUrlState } from '@/ui/navigation/states/navigationMemorizedUrlState';
 import { useLingui } from '@lingui/react/macro';
+import { IconGraph } from '@tabler/icons-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import { IconSearch, IconSettings } from 'twenty-ui/display';
@@ -49,6 +50,11 @@ export const MainNavigationDrawerFixedItems = () => {
             navigate(getSettingsPath(SettingsPath.ProfilePage));
           }}
           Icon={IconSettings}
+        />
+        <NavigationDrawerItem
+          label={t`Dashboard`}
+          to={'/dashboard'}
+          Icon={IconGraph}
         />
       </>
     )
