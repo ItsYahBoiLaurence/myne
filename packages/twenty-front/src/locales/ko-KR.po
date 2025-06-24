@@ -1430,6 +1430,11 @@ msgstr "덴마크어"
 msgid "Dark"
 msgstr "다크"
 
+#. js-lingui-id: 7p5kLi
+#: src/modules/navigation/components/MainNavigationDrawerFixedItems.tsx
+msgid "Dashboard"
+msgstr ""
+
 #. js-lingui-id: TtG/MN
 #: src/modules/settings/accounts/components/SettingsAccountsRowDropdownMenu.tsx
 msgid "Data deletion"

@@ -1430,6 +1430,11 @@ msgstr "デンマーク語"
 msgid "Dark"
 msgstr "\\\\u30c0\\\\u30fc\\\\u30af"
 
+#. js-lingui-id: 7p5kLi
+#: src/modules/navigation/components/MainNavigationDrawerFixedItems.tsx
+msgid "Dashboard"
+msgstr ""
+
 #. js-lingui-id: TtG/MN
 #: src/modules/settings/accounts/components/SettingsAccountsRowDropdownMenu.tsx
 msgid "Data deletion"
