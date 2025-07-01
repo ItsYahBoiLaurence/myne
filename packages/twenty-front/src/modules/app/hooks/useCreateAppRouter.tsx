@@ -26,6 +26,11 @@ import { CreateWorkspace } from '~/pages/onboarding/CreateWorkspace';
 import { InviteTeam } from '~/pages/onboarding/InviteTeam';
 import { PaymentSuccess } from '~/pages/onboarding/PaymentSuccess';
 import { SyncEmails } from '~/pages/onboarding/SyncEmails';
+import FirstResponse from '~/pages/reports/first-response-time';
+import ResolutionTime from '~/pages/reports/resolution-time';
+import TicketSummary from '~/pages/reports/ticket-summary';
+import TicketVolume from '~/pages/reports/ticket-volume';
+
 
 export const useCreateAppRouter = (
   isFunctionSettingsEnabled?: boolean,
@@ -39,8 +44,13 @@ export const useCreateAppRouter = (
         // to set scroll position before the page is rendered
         loader={async () => Promise.resolve(null)}
       >
-        <Route element={<DefaultLayout />}>
-        <Route path={AppPath.Dashboard} element={<Dashboard/>}/>
+          <Route element={<DefaultLayout />}>
+          <Route path={AppPath.Dashboard} element={<Dashboard/>}/>
+          <Route path={AppPath.First_Response} element={<FirstResponse/>}/>
+          <Route path={AppPath.Ticket_Summary} element={<TicketSummary/>}/>
+          <Route path={AppPath.Resolution_Time} element={<ResolutionTime/>}/>
+          <Route path={AppPath.Ticket_Volume} element={<TicketVolume/>}/>
+
           <Route path={AppPath.Verify} element={<VerifyLoginTokenEffect />} />
           <Route path={AppPath.VerifyEmail} element={<VerifyEmailEffect />} />
           <Route path={AppPath.SignInUp} element={<SignInUp />} />

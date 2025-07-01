@@ -1,5 +1,9 @@
 export enum AppPath {
   Dashboard = '/dashboard',
+  Ticket_Summary = '/ticket-summary',
+  First_Response = '/first-response',
+  Resolution_Time = '/resolution-time',
+  Ticket_Volume = '/ticket-volume',
 
   // Not logged-in
   Verify = '/verify',
