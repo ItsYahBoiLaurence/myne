@@ -127,8 +127,8 @@ export default function TicketSummary(){
                             {data.map(({issue_type,percentage,ticket_count},index)=>(
                                 <Tr style={{background: index%2==0? 'white': 'rgba(243, 249, 255, 1)'}}>
                                     <td style={{padding: '12px', textAlign:'left'}}>{issue_type}</td>
-                                    <Td>{percentage}</Td>
                                     <Td>{ticket_count}</Td>
+                                    <Td>{percentage}</Td>
                                 </Tr>
                             ))}
                         </tbody>

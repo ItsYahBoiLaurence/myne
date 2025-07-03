@@ -112,7 +112,7 @@ export default function TicketSummary(){
     return(
         <MainContainer>
             <TitleContainer>
-                <PageTitle title="Resolutio Time Report" fontColor={H1TitleFontColor.Primary}/>
+                <PageTitle title="Resolution Time Report" fontColor={H1TitleFontColor.Primary}/>
                 <StyledText>Tracks average time taken to resolve tickets based on issue type.</StyledText>
             </TitleContainer>
           <div style={{background:'rgba(255, 255, 255, 1)', padding: '20px', borderRadius: '4px', display: 'flex', flexDirection: 'column', gap: '12px'}}>

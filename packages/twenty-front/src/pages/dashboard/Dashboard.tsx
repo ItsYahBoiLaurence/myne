@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
 import { IconAlertTriangleFilled, IconCircleCheckFilled, IconListDetails, IconMailFilled } from '@tabler/icons-react';
+import { BarElement, CategoryScale, Chart, Legend, LinearScale, Title, Tooltip } from 'chart.js';
+import { Bar } from 'react-chartjs-2';
 import { H1Title, H1TitleFontColor } from 'twenty-ui/display';
 import { Card } from "twenty-ui/layout";
-
+Chart.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const data = [
     {
@@ -446,6 +448,34 @@ const TableWrapper = styled.div`
 `
 
 export default function Dashboard() {
+    const chartData = {
+        labels: ['June 3, 2025', 'June 4, 2025', 'June 5, 2025', 'June 6, 2025', 'June 7, 2025'],
+        datasets: [
+            {
+            label: 'Tickets Received',
+            data: [80, 70, 65, 90, 75],
+            backgroundColor: 'rgba(148, 184, 251, 0.76)', // Blue
+            },
+            {
+            label: 'Ticket Responded',
+            data: [60, 55, 50, 80, 60],
+            backgroundColor: 'rgba(255, 206, 19, 0.76)', // Green
+            },
+        ],
+    };
+    
+    const chartOptions = {
+        responsive: true,
+        plugins: {
+            legend: { display: true }, // Show legend to distinguish the two bars
+            title: { display: true, text: 'Ticket Overview (June 3–7, 2025)' },
+        },
+        scales: {
+            y: { beginAtZero: true },
+
+        },
+    };
+
     const date = new Date()
     const day = date.getDate();
     const month = date.toLocaleString('default', { month: 'short' });
@@ -476,7 +506,7 @@ export default function Dashboard() {
                     ))}
                 </GridReport>
                 <Graph>
-                    Graph Here
+                    <Bar data={chartData} options={chartOptions} />
                 </Graph>
             </DashboardReport>
             <div style={{background:'rgba(255, 255, 255, 1)', padding: '20px', borderRadius: '4px', display: 'flex', flexDirection: 'column', gap: '12px'}}>
